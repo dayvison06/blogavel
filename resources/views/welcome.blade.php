@@ -1,6 +1,6 @@
 @extends('components.layouts.master')
 
-@section('title', 'Home')
+@section('title', 'Dashboard')
 
 @section('content')
 
@@ -10,8 +10,8 @@
             <div class="row tm-row">
                 <div class="col-12">
                     <form method="GET" class="form-inline tm-mb-80 tm-search-form">
-                        <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
-                        <button class="tm-search-button" type="submit">
+                        <input class="form-control rounded-4 tm-search-input" name="query" type="text" placeholder="Buscar..." aria-label="Search">
+                        <button class="tm-search-button rounded-4" type="submit">
                             <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
                         </button>
                     </form>
@@ -25,7 +25,7 @@
                             <img src="img/img-01.jpg" alt="Image" class="img-fluid">
                         </div>
                         <span class="position-absolute tm-new-badge">New</span>
-                        <h2 class="tm-pt-30 tm-color-primary tm-post-title">Simple and useful HTML layout</h2>
+                        <h2 class="tm-pt-30 tm-color-primary tm-post-title">Maria Luiza indica resorts</h2>
                     </a>
                     <p class="tm-pt-30">
                         There is a clickable image with beautiful hover effect and active title link for each post item.
@@ -54,7 +54,7 @@
                         <a rel="nofollow" href="https://templatemo.com/tm-553-xtra-blog" target="_blank">Xtra Blog</a>  is a multi-purpose HTML CSS template from TemplateMo website.
                         Blog list, single post, about, contact pages are included. Left sidebar fixed width and content area is a fluid full-width.
                     </p>
-                    <div class="d-flex justify-content-between tm-pt-45">
+                    <div class="d-flex justify-content-between tm-pt-25">
                         <span class="tm-color-primary">Creative . Design . Business</span>
                         <span class="tm-color-primary">June 16, 2020</span>
                     </div>

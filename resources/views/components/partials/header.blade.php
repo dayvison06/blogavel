@@ -1,5 +1,6 @@
 <?php
     $active = '';
+    $user = new \App\Http\Controllers\Blogavel\UserController();
 ?>
 
 <header class="tm-header" id="tm-header">
@@ -8,8 +9,12 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="tm-site-header">
-            <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-times fa-2x"></i></div>
-            <h1 class="text-center">Xtra Blog</h1>
+            <div class="mb-3 mx-auto tm-site-logo"><img src="{{asset('img/blogavel_logo.svg')}}"></div>
+            <h2 class="text-center">Blogavel</h2>
+            @guest
+                <p class="text-center login_user"><a href="{{route('login')}}">Sign in</a></p>
+            @endguest
+            <p class="text-center login_user">{{$user->getUserName()}}</p>
         </div>
         <nav class="tm-nav" id="tm-nav">
             <ul>
