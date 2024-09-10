@@ -15,11 +15,11 @@
 
 </head>
 <body>
-@include('components.partials.header')
+@include('layouts.header')
 
 @yield('content')
 
-@include('components.partials.footer')
+@include('layouts.footer')
 </body>
     <script src="js/jquery.min.js"></script>
     <script src="js/templatemo-script.js"></script>

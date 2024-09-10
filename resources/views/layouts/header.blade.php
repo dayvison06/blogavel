@@ -12,9 +12,11 @@
             <div class="mb-3 mx-auto tm-site-logo"><img src="{{asset('img/blogavel_logo.svg')}}"></div>
             <h2 class="text-center">Blogavel</h2>
             @guest
-                <p class="text-center login_user"><a href="{{route('login')}}">Sign in</a></p>
+                <p class="text-center login_user"><a href="{{route('login')}}"><i class="fas fa-door-open"></i> Login</a></p>
             @endguest
-            <p class="text-center login_user">{{$user->getUserName()}}</p>
+            @auth
+                <p class="text-center"><x-button-menu>{{$user->getUserName()}}</x-button-menu></p>
+            @endauth
         </div>
         <nav class="tm-nav" id="tm-nav">
             <ul>
@@ -36,22 +38,5 @@
                     </a></li>
             </ul>
         </nav>
-        <div class="tm-mb-65">
-            <a rel="nofollow" href="https://fb.com/templatemo" class="tm-social-link">
-                <i class="fab fa-facebook tm-social-icon"></i>
-            </a>
-            <a href="https://twitter.com" class="tm-social-link">
-                <i class="fab fa-twitter tm-social-icon"></i>
-            </a>
-            <a href="https://instagram.com" class="tm-social-link">
-                <i class="fab fa-instagram tm-social-icon"></i>
-            </a>
-            <a href="https://linkedin.com" class="tm-social-link">
-                <i class="fab fa-linkedin tm-social-icon"></i>
-            </a>
-        </div>
-        <p class="tm-mb-80 pr-5 text-white">
-            Xtra Blog is a multi-purpose HTML template from TemplateMo website. Left side is a sticky menu bar. Right side content will scroll up and down.
-        </p>
     </div>
 </header>
