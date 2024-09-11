@@ -17,9 +17,12 @@ class Post extends Model
         'content',
         'author',
         'published_at',
+        'user_id',
     ];
 
     protected $dates = ['published_at'];
+
+    protected $casts = ['user_id' => 'int', 'published_at' => 'datetime'];
 
     public function user(){
         return $this->belongsTo(User::class);

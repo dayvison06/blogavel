@@ -6,6 +6,11 @@
 
     <div class="container-fluid">
         <main class="tm-main">
+            @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
             <!-- Search form -->
             <div class="row tm-row">
                 <div class="col-12">
