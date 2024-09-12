@@ -3,12 +3,15 @@
 namespace App\Services\Blogavel;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 class PostServices
 {
     protected $post;
-    public function __construct(Post $post){
+    protected $user;
+    public function __construct(Post $post, User $user){
         $this->post = $post;
+        $this->user = $user;
     }
 
     public function createPost(Request $request){
@@ -41,4 +44,18 @@ class PostServices
         return true;
     }
 
+    public function listPosts(){
+        return $this->post->all();
+    }
+
+    public function showPost($id){
+        return $this->post->where('id', $id)->first();
+    }
+
+    public function ownerPost($post) {
+        $user = $this->user;
+        $ownerPost = $user->where('id', $post->user_id)->first();
+
+        return $ownerPost;
+    }
 }

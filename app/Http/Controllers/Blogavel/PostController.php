@@ -17,6 +17,18 @@ class PostController extends Controller
         $this->postService = $postService;
     }
 
+    public function index(){
+        $posts = $this->postService->listPosts();
+        return view('welcome', ['posts' => $posts]);
+    }
+
+    public function show($id){
+        $post = $this->postService->showPost($id);
+        $ownerPost = $this->postService->ownerPost($post);
+
+        return view('posts.show', ['post' => $post, 'ownerPost' => $ownerPost]);
+    }
+
     public function create(){
         return view('posts.create');
     }
@@ -25,7 +37,7 @@ class PostController extends Controller
         $post = $this->postService->createPost($request);
 
         if($post === true){
-            return redirect()->route('welcome')->with(['success' => '✅ Postagem criada com sucesso!']);
+            return redirect()->route('welcome')->with(['success' => '✅ Postagem criada com sucesso!'])->getExpires(5);
         }
     }
 }

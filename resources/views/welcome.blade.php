@@ -23,84 +23,27 @@
                 </div>
             </div>
             <div class="row tm-row">
-                <article class="col-12 col-md-6 tm-post">
-                    <!-- Status de "New" -->
-                    <div class="status">New</div>
 
-                    <!-- Imagem do post -->
-                    <img src="https://placehold.co/300x200" alt="Imagem do Post">
+                @if($posts && $posts->count() > 0)
+                    @foreach($posts as $post)
+                        <article class="col-12 col-md-6 tm-post">
+                            <!-- Status de "New" -->
+                            <div class="status">New</div>
 
-                    <!-- Conteúdo do card -->
-                    <div class="card-content">
-                        <h2>Título do Post</h2>
-                        <p>Essa é a descrição do post. Fique à vontade para adicionar mais informações.</p>
-                    </div>
-                </article>
-                <article class="col-12 col-md-6 tm-post">
-                    <!-- Status de "New" -->
-                    <div class="status">New</div>
+                            <!-- Imagem do post -->
+                            <img src="https://placehold.co/300x200" alt="Imagem do Post">
 
-                    <!-- Imagem do post -->
-                    <img src="https://placehold.co/300x200" alt="Imagem do Post">
+                            <!-- Conteúdo do card -->
+                            <a href="/post/{{ $post->id }}"><div class="card-content">
+                                <h2>{{ $post->title }}</h2>
+                                <p>{{ $post->content }}</p>
 
-                    <!-- Conteúdo do card -->
-                    <div class="card-content">
-                        <h2>Título do Post</h2>
-                        <p>Essa é a descrição do post. Fique à vontade para adicionar mais informações.</p>
-                    </div>
-                </article>
-                <article class="col-12 col-md-6 tm-post">
-                    <!-- Status de "New" -->
-                    <div class="status">New</div>
-
-                    <!-- Imagem do post -->
-                    <img src="https://placehold.co/300x200" alt="Imagem do Post">
-
-                    <!-- Conteúdo do card -->
-                    <div class="card-content">
-                        <h2>Título do Post</h2>
-                        <p>Essa é a descrição do post. Fique à vontade para adicionar mais informações.</p>
-                    </div>
-                </article>
-                <article class="col-12 col-md-6 tm-post">
-                    <!-- Status de "New" -->
-                    <div class="status">New</div>
-
-                    <!-- Imagem do post -->
-                    <img src="https://placehold.co/300x200" alt="Imagem do Post">
-
-                    <!-- Conteúdo do card -->
-                    <div class="card-content">
-                        <h2>Título do Post</h2>
-                        <p>Essa é a descrição do post. Fique à vontade para adicionar mais informações.</p>
-                    </div>
-                </article>
-                <article class="col-12 col-md-6 tm-post">
-                    <!-- Status de "New" -->
-                    <div class="status">New</div>
-
-                    <!-- Imagem do post -->
-                    <img src="https://placehold.co/300x200" alt="Imagem do Post">
-
-                    <!-- Conteúdo do card -->
-                    <div class="card-content">
-                        <h2>Título do Post</h2>
-                        <p>Essa é a descrição do post. Fique à vontade para adicionar mais informações.</p>
-                    </div>
-                </article>
-                <article class="col-12 col-md-6 tm-post">
-                    <!-- Status de "New" -->
-                    <div class="status">New</div>
-
-                    <!-- Imagem do post -->
-                    <img src="https://placehold.co/300x200" alt="Imagem do Post">
-
-                    <!-- Conteúdo do card -->
-                    <div class="card-content">
-                        <h2>Título do Post</h2>
-                        <p>Essa é a descrição do post. Fique à vontade para adicionar mais informações.</p>
-                    </div>
-                </article>
+                            </div></a>
+                        </article>
+                    @endforeach
+                @else
+                    <h1>Nenhuma postagem encontrada</h1>
+                @endif
             </div>
             <div class="row tm-row tm-mt-100 tm-mb-75">
                 <div class="tm-prev-next-wrapper">

@@ -1,6 +1,6 @@
 <table align="center">
   <tr>
-    <td align="center"><img src="public/img/blogavel_logo.svg" alt="Laravel" style="height: 80px;"></td>
+    <td align="center"><img src="public/img/blogavel_logo.svg" alt="Blogavel Logo" style="height: 120px;"></td>
     <td align="center"><strong style="font-size: 80px;">Blogavel</strong></td>
   </tr>
 </table>

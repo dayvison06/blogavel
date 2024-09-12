@@ -5,8 +5,10 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('/')->group(function () {
-    Route::get('/', function ()  { return view ('welcome'); })->name('welcome');
-    Route::get('/post', function ()  { return view ('post'); })->name('post');
+    Route::get('/', [PostController::class, 'index']
+    )->name('welcome');
+    Route::get('/post/{id}',[PostController::class, 'show'])
+    ->name('post.show');
 
 });
 
@@ -22,4 +24,4 @@ Route::middleware('auth')->prefix('/pst')->group(function () {
     Route::post('/post', [PostController::class, 'store'])->name('post.store');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
