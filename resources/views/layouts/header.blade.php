@@ -4,15 +4,15 @@
 ?>
 
 <header class="tm-header" id="tm-header">
-    <div class="tm-header-wrapper">
-        <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+    <div class="tm-header-wrapper shadow-md">
+        <button class="navbar-toggler bg-black mx-3 mt-2 size-8 rounded" type="button" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
         <div class="tm-site-header">
-            <div class="mb-3 mx-auto tm-site-logo"><img src="{{asset('img/blogavel_logo.svg')}}"></div>
-            <h2 class="text-center">Blogavel</h2>
+            <div class="mb-3 mx-auto tm-site-logo shadow-sm"><img src="{{asset('img/laravel-original.svg')}}"></div>
+            <h2 class="text-center font-sans">Blogavel</h2>
             @guest
-                <p class="text-center login_user"><a href="{{route('login')}}"><i class="fas fa-door-open"></i> Login</a></p>
+                <p class="text-center login_user mt-8"><a href="{{route('login')}}"><i class="fas fa-door-open"></i> Login</a></p>
             @endguest
             @auth
                 <p class="text-center"><x-button-menu>{{$user->getUserName()}}</x-button-menu></p>

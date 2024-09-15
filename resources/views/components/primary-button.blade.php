@@ -4,6 +4,6 @@
 
 <style>
     .btn_login_page {
-        background-color: #19b852;
+        background-color: #ff7300;
     }
 </style>

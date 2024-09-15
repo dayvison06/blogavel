@@ -37,7 +37,7 @@ class PostController extends Controller
         $post = $this->postService->createPost($request);
 
         if($post === true){
-            return redirect()->route('welcome')->with(['success' => '✅ Postagem criada com sucesso!'])->getExpires(5);
+            return redirect()->route('welcome')->with(['success' => '✅ Postagem criada com sucesso!']);
         }
     }
 }

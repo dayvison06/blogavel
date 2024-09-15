@@ -28,7 +28,7 @@ hr {
 .form-control::placeholder { color: #999; }
 
 .tm-header {
-    background-color: #19b852;
+    background-color: #1e1f22;
     color: white;
 
     position: fixed;
@@ -168,7 +168,7 @@ article:hover img{
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #19b852;
+    background-color: #1e1f22;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -276,7 +276,7 @@ ul {
     width: 480px;
     margin-right: 30px;
     border-radius: 0;
-    border-color: #19b852;
+    border-color: #1e1f22;
     font-size: 1.2rem;
 }
 
@@ -284,7 +284,7 @@ ul {
     width: 60px;
     height: 60px;
     border: none;
-    background-color: #19b852;
+    background-color: #1e1f22;
     transition: all 0.3s ease;
 }
 
