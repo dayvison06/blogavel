@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="row tm-row">
-
+            @can('admin')
                 @if($posts && $posts->count() > 0)
                     @foreach($posts as $post)
                         <article class="col-12 col-md-6 tm-post">
@@ -44,6 +44,7 @@
                 @else
                     <h1>Nenhuma postagem encontrada</h1>
                 @endif
+                @endcan
             </div>
             <div class="row tm-row tm-mt-100 tm-mb-75">
                 <div class="tm-prev-next-wrapper">
